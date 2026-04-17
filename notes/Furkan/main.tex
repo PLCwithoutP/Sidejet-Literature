@@ -1,0 +1,154 @@
+% ============================================================
+% Linear Control Systems HW3 Report Template (EMPTY)
+% Obeys: <= 8 pages main report; Appendix not counted
+% ============================================================
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% --------- Metadata (edit these) ----------
+\newcommand{\CourseName}{Project Proposal}
+\newcommand{\HWName}{Side-Jet Interactions over a Hypersonic Cone Flow}
+\newcommand{\StudentName}{Mehmet Furkan Tunc, Elif Avcılar, Bayram Celik}
+
+\newcommand{\DateSubmitted}{\today}
+
+% --------- Convenience ----------
+\newcommand{\tol}{\texttt{tol}}
+\newcommand{\MATLAB}{\textsc{Matlab}}
+\newcommand{\RKFour}{RK4}
+
+\begin{document}
+
+% ============================================================
+% Title Page (Page 1)
+% ============================================================
+\begin{titlepage}
+\centering
+
+\vspace*{1.0in}
+
+{\LARGE \CourseName \par}
+\vspace{0.15in}
+{\Large \HWName \par}
+
+\vspace{0.75in}
+
+{\large \textbf{\StudentName} \par}
+
+
+\vspace{0.5in}
+
+\vfill
+
+{\large \DateSubmitted \par}
+
+\end{titlepage}
+
+% ============================================================
+% Methods (<= 1 page)
+% ============================================================
+\section{Motivation}
+Side-jet reaction control is widely used for maneuvering and reentry at high Mach numbers, yet the resulting jet–crossflow interaction can introduce separation/reattachment, multiple recirculation zones, and strong shock/shock and shock/shear-layer coupling that substantially alters surface pressure, aeroheating, and integrated forces (i.e., aerodynamic interference). 
+
+In this context, Karpuzcu and Levin (2022, 2023) conducted detailed hypersonic side-jet studies—examining canonical geometries including cones and reporting complex flow structures and unsteadiness using kinetic simulations (and, in 2022, complementary wind-tunnel schlieren evidence). 
+
+However, their baseline configurations emphasize cold, non-reacting conditions, and therefore do not address thermochemical non-equilibrium (e.g., vibrational excitation/dissociation) that becomes relevant for higher-enthalpy hypersonic environments. 
+
+Moreover, these works do not provide a direct, quantitative comparison against hypersonic CFD in terms of both predictive accuracy and computational cost—precisely the trade space needed for practical parametric design studies. 
+
+Finally, while side-jet interactions are frequently simulated with continuum CFD, much of that numerical literature targets supersonic crossflow regimes, leaving a narrower CFD evidence base for hypersonic cone side-jet conditions.
+
+In this study, our primary objectives are:
+\begin{itemize}
+    \item to study non-equilibrium effects on the flowfield characteristics using DSMC method in different configurations and,
+    \item testing hypersonic CFD solver capabilities against experimental and numerical results in terms of accuracy and cost using the same configuration as in base line study.
+\end{itemize}  
+
+\section{Methodology and Configuration}
+In this study, following solvers will be employed:
+\begin{itemize}
+    \item \texttt{dsmcFoam+} is an OpenFOAM-based Direct Simulation Monte Carlo (DSMC) solver used to compute rarefied/kinetic jet--crossflow interactions with time-accurate sampling. 
+    \item \texttt{hy2Foam} is an OpenFOAM finite-volume hypersonic CFD solver (two-temperature framework) used for continuum-based comparisons of accuracy and computational cost.
+\end{itemize}
+Karpuzcu and Levin (2023) report that a single DSMC simulation advanced to a final physical time of $t_f=5~\mathrm{ms}$ required approximately $4.6\times 10^{5}$ CPU-hours on Intel Xeon Phi 7250 ("Knights Landing") processors. In the present work, the planned thermochemical non-equilibrium DSMC campaign (additional internal-energy/chemistry modeling, tighter resolution requirements, and multiple operating points) is expected to demand significantly higher computational resources plus the hypersonic CFD comparison study which also requires resources (estimating $2.0\times 10^{6}$ CPU-hours for the complete non-equilibrium DSMC study set and hypersonic CFD comparison study).
+
+Base-line study inputs are given in Table \ref{tab:baselineInputs}. Relative to base-line study, differences of planned case studies are given in Table \ref{tab:differences}.
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{l l}
+\hline
+\multicolumn{2}{c}{\textbf{Geometry and placement (normalized by cone length $L$)}}\\
+\hline
+Cone diameter & $D = 0.10~\mathrm{m}$ \\
+Cone length & $L = 0.40~\mathrm{m}$ \\
+Jet diameter & $d_j = 1.0\times 10^{-3}~\mathrm{m}$ \\
+Jet center location & $x/L = 0.50,\;\; y/L = 0.0625$ \\
+Freestream unit Reynolds number & $Re_\infty = 1.0\times 10^{5}~\mathrm{m^{-1}}$ \\
+\hline
+\multicolumn{2}{c}{\textbf{DSMC time-accurate settings}}\\
+\hline
+Time step & $\Delta t = 5.0\times 10^{-9}~\mathrm{s}$ \\
+Flow establishment time & $t_{\mathrm{est}} = 2.5\times 10^{-3}~\mathrm{s}$ \\
+Sampling window & $t_{\mathrm{samp}} = 5.0\times 10^{-4}~\mathrm{s}$ \\
+Final physical time & $t_f = 5.0\times 10^{-3}~\mathrm{s}$ \\
+\hline
+\multicolumn{2}{c}{\textbf{Molecular/physical modeling (baseline cold case)}}\\
+\hline
+Molecular model & Variable Hard Sphere (VHS) \\
+$\mathrm{N_2}$ molecular diameter & $d_{\mathrm{N_2}} = 4.467\times 10^{-10}~\mathrm{m}$ \\
+Viscosity index & $\omega = 0.26$ \\
+Wall boundary condition & Isothermal, $T_w = 300~\mathrm{K}$ \\
+Chemistry & None (no reactions) \\
+Dimensionality & Axisymmetric \\
+Working fluids & Freestream: $\mathrm{N_2}$,\;\; Jet: $\mathrm{N_2}$ \\
+\hline
+\end{tabular}
+\caption{Baseline study inputs}
+\label{tab:baselineInputs}
+\end{table}
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{l l l l l}
+\hline
+\multicolumn{5}{c}{\textbf{DSMC Studies}}\\
+\hline
+Case Number & Gas & Thermal Eq. & Chemical Eq. & Method\\
+\hline
+Baseline Study & $N_2$ & Yes & Yes & DSMC \\
+Case 1 & $N_2$ & No & Yes & DSMC\\
+Case 2 & $N_2$ & No & No & DSMC\\
+Case 3 & 0.8 $N_2$ - 0.2 $O_2$ & Yes & Yes & DSMC\\
+Case 4 & 0.8 $N_2$ - 0.2 $O_2$ & No & No & DSMC\\
+\hline
+\multicolumn{5}{c}{\textbf{CFD Studies}}\\
+\hline
+Case Number & Gas & Thermal Eq. & Chemical Eq. & Method\\
+\hline
+Baseline Study & $N_2$ & Yes & Yes & DSMC \\
+Case 1 & $N_2$ & Yes & Yes & CFD\\
+Case 2 & $N_2$ & No & No & CFD\\
+Case 3 & 0.8 $N_2$ - 0.2 $O_2$ & Yes & Yes & CFD\\
+\hline
+\end{tabular}
+\caption{Differences in literature and proposed studies}
+\label{tab:differences}
+\end{table}
+
+\end{document}
+
