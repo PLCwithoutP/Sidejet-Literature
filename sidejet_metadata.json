@@ -1,0 +1,269 @@
+{
+  "sources": [
+    {
+      "id": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "name": "sidejetProject",
+      "order": 0
+    }
+  ],
+  "articles": [
+    {
+      "id": "fd577341-e627-488a-a589-c48c9771ef69",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "karpuzcu2023.pdf",
+      "filePath": "sidejetProject/karpuzcu2023.pdf",
+      "fileSize": 4148655,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Study of Side-Jet Interactions over a Hypersonic Cone Flow Using Kinetic Methods",
+        "authors": [
+          "I. T. Karpuzcu",
+          "D. A. Levin"
+        ],
+        "journal": "AIAA Journal",
+        "volume": "61",
+        "number": "11",
+        "pages": "",
+        "doi": "https://doi.org/10.2514/1.J063020",
+        "url": "",
+        "year": "2023",
+        "categories": [
+          "Side Jet",
+          "DSMC"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "85a4f38a-ce05-4d57-ad57-222cf6cc432c",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "karpuzcu2022.pdf",
+      "filePath": "sidejetProject/karpuzcu2022.pdf",
+      "fileSize": 5152296,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Jet Flow - Shockwave Interactions in a Hypersonic Flow using Experimental and Kinetic Methods",
+        "authors": [
+          "I. T. Karpuzcu",
+          "D. A. Levin",
+          "D. V. Mamrol",
+          "L. N. Wagner",
+          "M. E. Noftz",
+          "J. S. Jewell",
+          "S. T. Smith"
+        ],
+        "journal": "AIAA SciTech Forum",
+        "volume": "",
+        "number": null,
+        "pages": "",
+        "doi": "10.2514/6.2022-1577",
+        "url": "",
+        "year": "2022",
+        "categories": [
+          "Side Jet",
+          "DSMC"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "08138b32-5caa-44b4-bb10-93cf399319c9",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "min2005.pdf",
+      "filePath": "sidejetProject/min2005.pdf",
+      "fileSize": 782648,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Numerical investigation of the shock interaction effect on the lateral jet controlled missile",
+        "authors": [
+          "B.-Y. Min",
+          "J.-W. Lee",
+          "Y.-H. Byun"
+        ],
+        "journal": "Aerospace Science and Technology",
+        "volume": "10",
+        "number": null,
+        "pages": "",
+        "doi": "doi:10.1016/j.ast.2005.11.013",
+        "url": "",
+        "year": "2006",
+        "categories": [
+          "Missile",
+          "Supersonics",
+          "Side Jet"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "1ae626e5-8aac-402c-b4db-4033db64044c",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "aswin2010.pdf",
+      "filePath": "sidejetProject/aswin2010.pdf",
+      "fileSize": 1494551,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Numerical simulation of transverse side jet interaction with supersonic\nfree stream",
+        "authors": [
+          "G. Aswin",
+          "D. Chakraborty"
+        ],
+        "journal": "Aerospace Science and Technology",
+        "volume": "14",
+        "number": null,
+        "pages": "",
+        "doi": "http://dx.doi.org/10.1016/j.ast.2010.02.001",
+        "url": "",
+        "year": "2010",
+        "categories": [
+          "Supersonics",
+          "Side Jet"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "6d3626fa-7701-490d-8424-460d0dc62028",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "erdem2021.pdf",
+      "filePath": "sidejetProject/erdem2021.pdf",
+      "fileSize": 9197523,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Experimental Investigation of Sonic Transverse Jets in Mach 5 Crossflow",
+        "authors": [
+          "E. Erdem",
+          "K. Kontis"
+        ],
+        "journal": "Aerospace Science and Technology",
+        "volume": "110",
+        "number": null,
+        "pages": "",
+        "doi": "https://doi.org/10.1016/j.ast.2020.106419",
+        "url": "",
+        "year": "2021",
+        "categories": [
+          "Experiment",
+          "Side Jet"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "7eb6ba7b-8a50-410e-a20a-c83105e8131f",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "zhao2025.pdf",
+      "filePath": "sidejetProject/zhao2025.pdf",
+      "fileSize": 13582674,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Lateral jet-rarefied hypersonic freestream interaction over a\nthree-dimensional cone",
+        "authors": [
+          "G. Zhao",
+          "C. Zhong",
+          "S. Liu",
+          "J. Chen",
+          "H. Jin",
+          "C. Zhuo"
+        ],
+        "journal": "Aerospace Science and Technology",
+        "volume": "162",
+        "number": null,
+        "pages": "",
+        "doi": "https://doi.org/10.1016/j.ast.2025.110220",
+        "url": "",
+        "year": "2025",
+        "categories": [
+          "Side Jet",
+          "3D",
+          "DUGKS"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "10ce9e97-2a6c-4554-b7ec-169e94d9028d",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "miller2018.pdf",
+      "filePath": "sidejetProject/miller2018.pdf",
+      "fileSize": 8026141,
+      "addedAt": 1776407753816,
+      "status": "completed",
+      "metadata": {
+        "title": "Numerical investigation of a pulsed reaction control jet in hypersonic crossflow",
+        "authors": [
+          "W. A. Miller",
+          "P. R. Medwell",
+          "C. J. Doolan",
+          "M. Kim"
+        ],
+        "journal": "Physics of Fluids",
+        "volume": "30",
+        "number": null,
+        "pages": "",
+        "doi": "10.1063/1.5048544",
+        "url": "",
+        "year": "2018",
+        "categories": [
+          "rhoCentralFoam",
+          "Side Jet"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    },
+    {
+      "id": "d4e332ca-55df-4865-9bc0-5bdf79be4c8e",
+      "sourceId": "4e724cfc-0beb-4afa-9570-9accecc12476",
+      "fileName": "dong2018.pdf",
+      "filePath": "sidejetProject/dong2018.pdf",
+      "fileSize": 3110625,
+      "addedAt": 1776408154775,
+      "status": "completed",
+      "metadata": {
+        "title": "Numerical Investigation of Lateral Jet with Supersonic Reacting Flow",
+        "authors": [
+          "H. Dong",
+          "J. Liu",
+          "Z. Chen",
+          "F. Zhang"
+        ],
+        "journal": "Journal of Spacecraft and Rockets",
+        "volume": "55",
+        "number": "4",
+        "pages": "",
+        "doi": "http://dx.doi.org/10.2514/1.A34096",
+        "url": "",
+        "year": "2018",
+        "categories": [
+          "Supersonics",
+          "Chemical",
+          "Missile"
+        ],
+        "keywords": [],
+        "abstract": "",
+        "bibtex": ""
+      }
+    }
+  ],
+  "notes": []
+}
